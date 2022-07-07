@@ -19,7 +19,7 @@ st.sidebar.markdown('### Jogos Anteriores')
 st.sidebar.write(all_games)
 
 ## Main Page
-st.image(r'imagens/mega-sena-logo-1.png')
+st.image(r'mega-sena-logo-1.png')
 '''
 # Sorteador de Jogos da Mega-Sena
 ### Todos os jogos sorteados pelo app, **com certeza nunca foram sorteados anteriormente** pela caixa economica
