@@ -7,7 +7,7 @@ I made an app to raffle how many games you want, with how many numbers you want.
 And ensure then the game has never been raffled before
 
 ## APP Development
-I use pandas, streamlit frameworks to made the app
+I used pandas, streamlit frameworks to made the app
 - Pandas:
 > For data processing and get an list with all the games raffled before
 
