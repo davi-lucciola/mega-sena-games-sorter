@@ -34,5 +34,5 @@ games_numbers.form_submit_button('Sortear')
 ### Sorteando jogos e printando na tela
 if (qnt_games != 0 and qnt_numbers != 0):
     new_games_dt = pd.DataFrame(sorting_new_games(qnt_games, qnt_numbers, previous_games))
-    st.table(new_games_dt.sample(5))
+    st.table(new_games_dt)
     qnt_numbers = qnt_games = 0
