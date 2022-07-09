@@ -1,4 +1,3 @@
-from pydoc import doc
 import pandas as pd
 from random import randint
 
