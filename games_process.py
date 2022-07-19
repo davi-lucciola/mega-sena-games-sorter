@@ -59,3 +59,11 @@ def sorting_new_games(qnt_games, qnt_numbers, previous_games=[]):
             games_new.append(game_ind.copy())
         game_ind.clear()
     return games_new
+
+def renaming(df):
+    for c in range(len(df.columns)):
+        df.rename({c: f'Bola {c+1}'}, axis=1, inplace=True)
+    for c in range(len(df.index)):
+        df.rename({c: f'Jogo {c+1}'}, axis=0, inplace=True)
+    return df
+
