@@ -13,3 +13,8 @@ I used pandas, streamlit frameworks to made the app
 
 - Strealit:
 > For interactive, pretty and easy to made interface 
+
+## How to run local
+- download the .py files
+- install the dependences with ``pip install -r requiriments.txt``
+- run command ``streamlit run main.py``
