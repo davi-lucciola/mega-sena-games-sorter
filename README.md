@@ -1,4 +1,4 @@
-# MegaSena Games Sorter
+# Mega-Sena Games Sorter
 Mega Sena is a brasilian game, then six numbers between _1 and 60 are raffled_. 
 But you can make each game choosing with between 6 and 15 numbers
 
