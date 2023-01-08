@@ -11,7 +11,7 @@ I used pandas, streamlit frameworks to made the app
 - Pandas:
 > For data processing and get an list with all the games raffled before
 
-- Strealit:
+- Streamlit:
 > For interactive, pretty and easy to made interface 
 
 ## How to run local

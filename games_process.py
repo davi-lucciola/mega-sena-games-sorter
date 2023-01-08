@@ -1,8 +1,9 @@
 import pandas as pd
+from pandas import DataFrame
 from random import randint
 
 
-def process_games(directory):
+def process_games(directory: str) -> DataFrame:
     '''
     by: Davi Lucciola.
     Formata o excel do site da MegaSena da Caixa Ecônomica
@@ -12,7 +13,7 @@ def process_games(directory):
     mega_sena_games.columns = map(lambda c: c.capitalize(), mega_sena_games.columns)
     return mega_sena_games
 
-def listing_games(sheet):
+def listing_games(sheet: DataFrame) -> list:
     '''
     by: Davi Lucciola.
     Pega a base de dados formatada (excel) e faz um jogo
@@ -28,7 +29,7 @@ def listing_games(sheet):
         previous_game.clear()
     return previous_games
 
-def sorting_new_games(qnt_games, qnt_numbers, previous_games=[]):
+def sorting_new_games(qnt_games: int, qnt_numbers: int, previous_games: list = []) -> list:
     '''
     by: Davi Lucciola.
     Sorteia jogos aleatorios com uma quantidade de numeros determinada pelo usuario e verifica em uma lista de jogos se tem algum jogo cujo 6 numeros são iguais.
@@ -60,10 +61,10 @@ def sorting_new_games(qnt_games, qnt_numbers, previous_games=[]):
         game_ind.clear()
     return games_new
 
-def renaming(df):
+def renaming(df: DataFrame) -> DataFrame:
     for c in range(len(df.columns)):
-        df.rename({c: f'Bola {c+1}'}, axis=1, inplace=True)
+        df.rename({c: f'Bola {c+1}'}, axis='columns', inplace=True)
     for c in range(len(df.index)):
-        df.rename({c: f'Jogo {c+1}'}, axis=0, inplace=True)
+        df.rename({c: f'Jogo {c+1}'}, axis='index', inplace=True)
     return df
 
