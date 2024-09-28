@@ -1,11 +1,11 @@
-import streamlit as st
-from games_process import process_games, listing_games, sorting_new_games, renaming
 import pandas as pd
+import streamlit as st
 from io import BytesIO
+from games_process import process_games, listing_games, sorting_new_games, renaming
 
 
 @st.experimental_memo
-def to_excel(df):
+def to_excel(df: pd.DataFrame):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
     df.to_excel(writer, index=False, sheet_name='Sheet1')
@@ -27,10 +27,11 @@ previous_games = listing_games(all_games)
 # Função do sorteador principal
 ## Side Bar
 st.sidebar.markdown('### Jogos Anteriores')
-st.sidebar.write(all_games)
+st.sidebar.table(all_games)
 
 ## Main Page
 st.image(r'./assets/mega-sena-logo.png')
+
 '''
 # Sorteador de Jogos da Mega-Sena
 ### Todos os jogos sorteados pelo app, **com certeza nunca foram sorteados anteriormente** pela caixa economica
@@ -49,4 +50,3 @@ if button:
     file_name = f'mega_sena_{qnt_games}_games.xlsx'
     new_games_df_xlsx = to_excel(new_games_df)
     st.download_button('Download Excel', data=new_games_df_xlsx, file_name=file_name)
-

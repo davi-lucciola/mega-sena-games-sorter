@@ -1,20 +1,30 @@
 # Mega-Sena Games Sorter
-Mega Sena is a brasilian game, then six numbers between _1 and 60 are raffled_. 
-But you can make each game choosing with between 6 and 15 numbers
 
-## Objective
-I made an app to raffle how many games you want, with how many numbers you want.
-And ensure then the game has never been raffled before
+![App](./assets/mega-sena-games-sorter.png)
 
-## APP Development
-I used pandas, streamlit frameworks to made the app
+Megasena é um jogo de apostas brasileiro feito pela caixa ecônomica onde 6 numeros entre 1 e 60 são sorteados. 
+
+Acesse em: https://mega-sena-game-sorter.streamlit.app/
+
+## Objetivo
+
+O objetivo desse app é analisar todos os jogos anteriores (disponivel na planilha "mega_sena.xlsx") e sortear N jogos garantindo que cada novo jogo sorteado não tem 4 numeros em comum com algum jogo sorteado anteriormente.
+
+## Tecnologias Utilizadas
+Foi utilizado o pandas e o streamlit para criar o jogo
+
 - Pandas:
-> For data processing and get an list with all the games raffled before
+> Para o processamento de dados e manipulação dos jogos sorteados anteriormente
 
 - Streamlit:
-> For interactive, pretty and easy to made interface 
+> Para a interface bonita e interativa.
 
-## How to run local
-- download the .py files
-- install the dependences with ``pip install -r requiriments.txt``
-- run command ``streamlit run main.py``
+## Rodando Localmente
+- Clone o projeto
+> `git clone https://github.com/davi-lucciola/MegaSenaGamesSorter.git`
+
+- Instale as depêndencias
+> `pip install -r requiriments.txt`
+
+- Execute com o comando 
+> `streamlit run main.py`
